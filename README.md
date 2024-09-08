@@ -6,3 +6,5 @@
       [Abstract Factory](src/main/java/AbstractFactory/)
   3. ### Composite
       [Composite](src/main/java/Composite/)
+  4. ### Observer
+      [Observer](src/main/java/Observer/)
