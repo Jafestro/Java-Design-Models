@@ -8,3 +8,5 @@
       [Composite](src/main/java/Composite/)
   4. ### Observer
       [Observer](src/main/java/Observer/)
+  5. ### Singleton
+      [Singleton](src/main/java/Singleton/)
