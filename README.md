@@ -10,5 +10,7 @@
       [Observer](src/main/java/Observer/)
   5. ### Singleton
       [Singleton](src/main/java/Singleton/)
+  6. ### Decorator
+      [Decorator](src/main/java/Decorator/)
   7. ### State / Game
       [State](src/main/java/State/)
