@@ -13,9 +13,9 @@ public class NoviceState extends State{
             case 1 -> this.getCharacter().train();
         }
         // Abstraction at its finest :D
-        if (this.getCharacter().getExp().compareTo(Integer.toUnsignedLong(Threshold.INTERMEDIATE.getExp())) == 0){
+        if (this.getCharacter().getExp() >= Integer.toUnsignedLong(Threshold.INTERMEDIATE.getExp())){
             this.getCharacter().setState(new IntermediateState(this.getCharacter()));
-            this.getCharacter().levelUp("INTERMEDIATE");
+            this.getCharacter().levelUp("INTERMEDIATE", 40);
         }
     }
 }

@@ -15,9 +15,9 @@ public class ExpertState extends State {
             case 2 -> this.getCharacter().meditate();
             case 3 -> this.getCharacter().fight();
         }
-        if (this.getCharacter().getExp().compareTo(Integer.toUnsignedLong(Threshold.MASTER.getExp())) == 0){
+        if (this.getCharacter().getExp() >= Integer.toUnsignedLong(Threshold.MASTER.getExp())){
             this.getCharacter().setState(new MasterState(this.getCharacter()));
-            this.getCharacter().levelUp("MASTER");
+            this.getCharacter().levelUp("MASTER", 800);
         }
     }
     

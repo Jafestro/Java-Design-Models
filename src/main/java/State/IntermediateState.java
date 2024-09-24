@@ -15,9 +15,9 @@ public class IntermediateState extends State {
             case 2 -> this.getCharacter().meditate();
         }
         // Abstraction at its finest :D
-        if (this.getCharacter().getExp().compareTo(Integer.toUnsignedLong(Threshold.EXPERT.getExp())) == 0){
+        if (this.getCharacter().getExp() >= Integer.toUnsignedLong(Threshold.EXPERT.getExp())){
             this.getCharacter().setState(new ExpertState(this.getCharacter()));
-            this.getCharacter().levelUp("EXPERT");
+            this.getCharacter().levelUp("EXPERT", 150);
         }
     }
     
