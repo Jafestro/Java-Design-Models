@@ -14,3 +14,5 @@
       [Decorator](src/main/java/Decorator/)
   7. ### State / Game
       [State](src/main/java/State/)
+  8. ### Template Method / Game
+      [Template Method](src/main/java/Template/)
