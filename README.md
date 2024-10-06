@@ -16,3 +16,5 @@
       [State](src/main/java/State/)
   8. ### Template Method / Game
       [Template Method](src/main/java/Template/)
+  9. ### Strategy / Algorithms
+      [Strategy](src/main/java/Strategy/)
