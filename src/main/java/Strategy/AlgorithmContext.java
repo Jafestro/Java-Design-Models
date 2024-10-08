@@ -1,29 +1,31 @@
 package Strategy;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class AlgorithmContext<T> {
-    @SuppressWarnings("rawtypes")
-    private AlgorithmStrategy algorithm;
+    private AlgorithmStrategy<T> algorithm;
+    private static final DecimalFormat decimalFormat = new DecimalFormat("0.000000"); // 6 decimal places
 
-    public AlgorithmContext(@SuppressWarnings("rawtypes") AlgorithmStrategy algorithm) {
+    public AlgorithmContext(AlgorithmStrategy<T> algorithm) {
         this.algorithm = algorithm;
     }
 
-    public void setAlgorithm(@SuppressWarnings("rawtypes") AlgorithmStrategy algorithm) {
+    public void setAlgorithm(AlgorithmStrategy<T> algorithm) {
         this.algorithm = algorithm;
     }
 
-    @SuppressWarnings("unchecked")
     public ArrayList<T> sort(ArrayList<T> array) {
         return algorithm.sort(array);
     }
 
-    public double timeAlgorithm(ArrayList<T> list) {
+    public String timeAlgorithm(ArrayList<T> list) {
         long startTime = System.nanoTime();
         algorithm.sort(list);
         long endTime = System.nanoTime();
         long elapsedTime = endTime - startTime;
-        return elapsedTime / 1_000_000_000.0;
+        double elapsedTimeInSeconds = elapsedTime / 1_000_000_000.0;
+        
+        return decimalFormat.format(elapsedTimeInSeconds); // Return time formatted to 6 decimal places
     }
 }
