@@ -18,3 +18,5 @@
       [Template Method](src/main/java/Template/)
   9. ### Strategy / Algorithms
       [Strategy](src/main/java/Strategy/)
+  10. ### Chain Of Responsibility / Customer Feedback Handler
+      [Chain Of Responsibility](src/main/java/ChainOfResponsibility/)
