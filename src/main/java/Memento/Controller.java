@@ -8,11 +8,13 @@ public class Controller {
     private Model model;
     private Gui gui;
     private List<IMemento> history; // Memento history
+    private List<IMemento> redoHistory; // Redo history
 
     public Controller(Gui gui) {
         this.model = new Model();
         this.gui = gui;
         this.history = new ArrayList<>();
+        this.redoHistory = new ArrayList<>();
     }
 
     public void setOption(int optionNumber, int choice) {
@@ -37,6 +39,17 @@ public class Controller {
         if (!history.isEmpty()) {
             System.out.println("Memento found in history");
             IMemento previousState = history.remove(history.size() - 1);
+            IMemento currentState = model.createMemento();
+            redoHistory.add(currentState);
+            model.restoreState(previousState);
+            gui.updateGui();
+        }
+    }
+
+    public void redo() {
+        if (!redoHistory.isEmpty()) {
+            System.out.println("Memento found in redo history");
+            IMemento previousState = redoHistory.remove(redoHistory.size() - 1);
             model.restoreState(previousState);
             gui.updateGui();
         }
@@ -45,5 +58,18 @@ public class Controller {
     private void saveToHistory() {
         IMemento currentState = model.createMemento();
         history.add(currentState);
+        redoHistory.clear();
+    }
+
+    public List<IMemento> getHistory() {
+        return history;
+    }
+
+    public void restoreStateFromHistory(int index) {
+        if (index >= 0 && index < history.size()) {
+            IMemento selectedState = history.get(index);
+            model.restoreState(selectedState);
+            gui.updateGui();
+        }
     }
 }

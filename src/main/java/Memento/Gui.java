@@ -3,6 +3,7 @@ package Memento;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
@@ -47,8 +48,12 @@ public class Gui extends Application {
         Label label = new Label("Press Ctrl-Z to undo the last change.");
         label.setPadding(insets);
 
+
+        Button historyButton = new Button("Show History");
+        historyButton.setOnAction(event -> openHistoryWindow());
+
         // create a VBox that contains the HBox and the CheckBox
-        VBox vBox = new VBox(hBox, checkBox, label);
+        VBox vBox = new VBox(hBox, checkBox, label, historyButton);
         // call controller when the CheckBox is clicked
         checkBox.setOnAction(event -> {
             controller.setIsSelected(checkBox.isSelected());
@@ -61,6 +66,12 @@ public class Gui extends Application {
                 // Ctrl-Z: undo
                 System.out.println("Undo key combination pressed");
                 controller.undo();
+            }
+            else if (event.isControlDown() && event.getCode() == KeyCode.Y) {
+                // Ctrl-Y: redo
+                System.out.println("Redo key combination pressed");
+                controller.redo();
+                // controller.redo();
             }
         });
 
@@ -76,5 +87,11 @@ public class Gui extends Application {
         colorBox2.setColor(controller.getOption(2));
         colorBox3.setColor(controller.getOption(3));
         checkBox.setSelected(controller.getIsSelected());
+    }
+
+    private void openHistoryWindow() {
+        HistoryWindow historyWindow = new HistoryWindow(controller);
+        Stage historyStage = new Stage();
+        historyWindow.start(historyStage);
     }
 }
