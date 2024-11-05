@@ -1,4 +1,4 @@
-package Singleton;
+package main.java.Singleton;
 
 public class Main {
     public static void main(String[] args) {

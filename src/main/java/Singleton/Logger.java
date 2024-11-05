@@ -1,4 +1,4 @@
-package Singleton;
+package main.java.Singleton;
 
 import java.io.FileWriter;
 import java.io.IOException;

@@ -1,24 +1,26 @@
 # Design Patterns
 - ## Assignments
-  1. ### Factory Method
+  - ### Factory Method
       [Factory](src/main/java/Factory)
-  2. ### Abstract Factory
+  - ### Abstract Factory
       [Abstract Factory](src/main/java/AbstractFactory/)
-  3. ### Composite
+  - ### Composite
       [Composite](src/main/java/Composite/)
-  4. ### Observer
+  - ### Observer
       [Observer](src/main/java/Observer/)
-  5. ### Singleton
+  - ### Singleton
       [Singleton](src/main/java/Singleton/)
-  6. ### Decorator
+  - ### Decorator
       [Decorator](src/main/java/Decorator/)
-  7. ### State / Game
+  - ### State / Game
       [State](src/main/java/State/)
-  8. ### Template Method / Game
+  - ### Template Method / Game
       [Template Method](src/main/java/Template/)
-  9. ### Strategy / Algorithms
+  - ### Strategy / Algorithms
       [Strategy](src/main/java/Strategy/)
-  10. ### Chain Of Responsibility / Customer Feedback Handler
+  - ### Chain Of Responsibility / Customer Feedback Handler
       [Chain Of Responsibility](src/main/java/ChainOfResponsibility/)
-  11. ### Memento / Colors
+  - ### Memento / Colors
       [Memento](src/main/java/Memento/)
+  - ### Proxy / Protected Documents
+      [Proxy](src/main/java/Proxy/)
