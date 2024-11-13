@@ -26,3 +26,5 @@
       [Proxy](src/main/java/Proxy/)
   - ### Visitor / FileSystem
       [Visitor](src/main/java/Visitor/)
+  - ### Builder / Computer Builder
+      [Builder](src/main/java/Builder/)
