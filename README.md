@@ -30,3 +30,5 @@
       [Builder](src/main/java/Builder/)
   - ### Adapter / Calendar
       [Adapter](src/main/java/Adapter/)
+  - ### Bridge / Remote Control
+      [Bridge](src/main/java/Bridge/)
