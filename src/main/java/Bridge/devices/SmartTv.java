@@ -57,7 +57,7 @@ public class SmartTv implements Device {
     @Override
     public void printStatus() {
         System.out.println("------------------------------------");
-        System.out.println("| I'm SmartTv. My IQ is 200. So I'm smart. Basic TV is dumb. Based.");
+        System.out.println("| I'm SmartTv. My IQ is 100000000000. So I'm smart. Basic TV is dumb. Based.");
         System.out.println("| I'm " + (on ? "enabled" : "disabled"));
         System.out.println("| Current volume is " + volume + "%");
         System.out.println("| Current channel is " + channel);
