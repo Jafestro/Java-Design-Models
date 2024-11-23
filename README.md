@@ -32,3 +32,5 @@
       [Adapter](src/main/java/Adapter/)
   - ### Bridge / Remote Control
       [Bridge](src/main/java/Bridge/)
+  - ### Flyweight / RPG Map Maker
+      [Flyweight](https://github.com/Jafestro/RPG-Map-Maker)
