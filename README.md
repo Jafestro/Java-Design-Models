@@ -34,3 +34,5 @@
       [Bridge](src/main/java/Bridge/)
   - ### Flyweight / RPG Map Maker
       [Flyweight](https://github.com/Jafestro/RPG-Map-Maker)
+  - ### Prototype / Cloning
+      [Prototype](src/main/java/Prototype/)
