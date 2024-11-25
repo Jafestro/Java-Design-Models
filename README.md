@@ -36,3 +36,5 @@
       [Flyweight](https://github.com/Jafestro/RPG-Map-Maker)
   - ### Prototype / Cloning
       [Prototype](src/main/java/Prototype/)
+  - ### Mediator / Chat Room
+      [Mediator](https://github.com/Jafestro/Chat-Room)
